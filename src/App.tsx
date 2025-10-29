@@ -9,7 +9,7 @@ const App = () => {
     <Routes>
       <Route 
         path="/" 
-        element={<Navigate to="/dashboard" replace />} 
+        element={<Navigate to="/login" replace />} 
       />
 
       <Route 
@@ -34,7 +34,7 @@ const App = () => {
 
       <Route 
         path="*" 
-        element={<Navigate to="/dashboard" replace />} 
+        element={<Navigate to="/login" replace />} 
       />
     </Routes>
   );
