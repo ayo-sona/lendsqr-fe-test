@@ -7,35 +7,19 @@ import Dashboard from "./pages/Dashboard/dashboard";
 const App = () => {
   return (
     <Routes>
-      <Route 
-        path="/" 
-        element={<Navigate to="/login" replace />} 
-      />
+      <Route path="/" element={<Navigate to="/login" replace />} />
 
-      <Route 
-        path="/login" 
-        element={<Login />} 
-      />
+      <Route path="/login" element={<Login />} />
 
-      <Route 
-        path="/dashboard" 
-        element={<Dashboard />} 
-      />
+      <Route path="/dashboard" element={<Dashboard />} />
 
-      <Route 
-        path="/users" 
-        element={<Users />} 
-      />
+      <Route path="/#" element={<Dashboard />} />
 
-      <Route 
-        path="/users/:userId" 
-        element={<UserDetails />} 
-      />
+      <Route path="/users" element={<Users />} />
 
-      <Route 
-        path="*" 
-        element={<Navigate to="/login" replace />} 
-      />
+      <Route path="/users/:userId" element={<UserDetails />} />
+
+      <Route path="*" element={<Navigate to="/login" replace />} />
     </Routes>
   );
 };

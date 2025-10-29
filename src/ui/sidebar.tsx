@@ -228,10 +228,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <div key={sectionIndex} style={{ marginBottom: "30px" }}>
               <h4 style={sectionTitleStyle}>{section.title}</h4>
               {section.items.map((item, itemIndex) => (
-                <Link
+                  <Link
                   key={itemIndex}
-                  to={item.path}
-                  style={navItemStyle(location.pathname === item.path)}
+                  to={`${item.label === "Users" ? item.path : "/dashboard"}`}
+                  style={navItemStyle(item.label === "Users" ? location.pathname === "/users" : false)}
                   onClick={onClose}
                 >
                   <span style={{ display: "flex", alignItems: "center", width: "20px" }}>

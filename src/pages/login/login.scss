@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=sans:wght@300;400;500;600;700&display=swap');
 
 body {
   background: linear-gradient(to right, #f9fafbf0 50%, #ffffff 50%);
@@ -32,12 +32,12 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-left: -250px;
 
     img {
       &:first-child {
         width: 32px;
         height: 32px;
+        margin-left: -50px;
       }
     }
   }
@@ -48,14 +48,13 @@ body {
     align-items: center;
     justify-content: flex-start;
     padding-left: 0px;
-    margin-left: -240px;
 
     img {
-      width: 80%;
-      max-width: none;
-      max-height: none;
+      max-width: 90%;
+      max-height: 600px;
       object-fit: contain;
       opacity: 80%;
+      margin-left: -50px;
     }
   }
 }
