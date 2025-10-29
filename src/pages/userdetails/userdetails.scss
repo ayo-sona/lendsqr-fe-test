@@ -1,0 +1,604 @@
+.user-details-section {
+    padding: 60px;
+    margin-top: 100px;
+    font-family: "Montserrat", sans-serif;
+  
+    .back-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: none;
+      border: none;
+      color: #545f7d;
+      font-size: 16px;
+      font-weight: 400;
+      cursor: pointer;
+      margin-bottom: 30px;
+      padding: 0;
+      transition: color 0.2s;
+  
+      &:hover {
+        color: #213f7d;
+      }
+  
+      svg {
+        font-size: 20px;
+      }
+    }
+  
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+  
+      h2 {
+        font-size: 24px;
+        font-weight: 500;
+        color: #213f7d;
+        margin: 0;
+      }
+  
+      .action-buttons {
+        display: flex;
+        gap: 20px;
+  
+        button {
+          padding: 12px 24px;
+          border-radius: 8px;
+          font-size: 14px;
+          font-weight: 600;
+          cursor: pointer;
+          text-transform: uppercase;
+          font-family: "Montserrat", sans-serif;
+          letter-spacing: 0.5px;
+          transition: all 0.2s;
+  
+          &.btn-blacklist {
+            background: transparent;
+            border: 1px solid #e4033b;
+            color: #e4033b;
+  
+            &:hover {
+              background: #e4033b;
+              color: white;
+            }
+          }
+  
+          &.btn-activate {
+            background: transparent;
+            border: 1px solid #39cdcc;
+            color: #39cdcc;
+  
+            &:hover {
+              background: #39cdcc;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  
+    .user-summary-card {
+      background: white;
+      border-radius: 4px;
+      box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+      margin-bottom: 30px;
+      overflow: hidden;
+  
+      .user-profile-section {
+        display: flex;
+        align-items: center;
+        padding: 30px;
+        gap: 30px;
+  
+        .profile-info {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+  
+          .avatar-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(33, 63, 125, 0.16);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+  
+          .profile-icon {
+            width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #213f7d;
+            font-size: 48px;
+          }
+  
+          .user-name-section {
+            h3 {
+              font-size: 22px;
+              font-weight: 500;
+              color: #213f7d;
+              margin: 0 0 8px 0;
+            }
+  
+            p {
+              font-size: 14px;
+              color: #545f7d;
+              margin: 0;
+            }
+          }
+        }
+  
+        .divider {
+          width: 1px;
+          height: 60px;
+          background: rgba(84, 95, 125, 0.2);
+        }
+  
+        .tier-section {
+          .label {
+            font-size: 14px;
+            font-weight: 500;
+            color: #545f7d;
+            margin: 0 0 8px 0;
+          }
+  
+          .stars {
+            display: flex;
+            gap: 4px;
+  
+            .star {
+              font-size: 16px;
+              color: #e9b200;
+  
+              &:not(.filled) {
+                color: #e5e5e5;
+              }
+            }
+          }
+        }
+  
+        .bank-section {
+          h3 {
+            font-size: 22px;
+            font-weight: 500;
+            color: #213f7d;
+            margin: 0 0 8px 0;
+          }
+  
+          p {
+            font-size: 12px;
+            color: #213f7d;
+            margin: 0;
+          }
+        }
+      }
+  
+      .tabs-section {
+        display: flex;
+  
+        .tab {
+          flex: 1;
+          padding: 18px 20px;
+          background: none;
+          border: none;
+          border-bottom: 2px solid transparent;
+          color: rgba(0, 0, 0, 0.8);
+          font-size: 14px;
+          font-weight: 400;
+          cursor: pointer;
+          transition: all 0.2s;
+          font-family: "Montserrat", sans-serif;
+  
+          &:hover {
+            background: #f9fafb;
+          }
+  
+          &.active {
+            border-bottom-color: #39cdcc;
+            color: #39cdcc;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  
+    .user-info-card {
+      background: white;
+      border-radius: 4px;
+      box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+      padding: 30px;
+  
+      .info-section {
+        padding: 30px 0;
+  
+        &:not(:last-child) {
+          border-bottom: 1px solid #e5e5e5;
+        }
+  
+        .section-title {
+          font-size: 16px;
+          font-weight: 500;
+          color: #213f7d;
+          margin: 0 0 30px 0;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+  
+        .info-grid {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          gap: 30px;
+          row-gap: 30px;
+  
+          .info-item {
+            .label {
+              font-size: 12px;
+              font-weight: 400;
+              color: #545f7d;
+              text-transform: uppercase;
+              padding-left: 10px;
+              margin: 0 0 8px 0;
+              letter-spacing: 0.5px;
+              white-space: nowrap;
+            }
+  
+            .value {
+              font-size: 16px;
+              font-weight: 500;
+              color: #545f7d;
+              padding-left: 10px;
+              margin: 0;
+              word-break: break-word;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 1400px) {
+    .user-details-section {
+      .user-info-card {
+        .info-section {
+          .info-grid {
+            grid-template-columns: repeat(4, 1fr);
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .user-details-section {
+      padding: 40px 30px;
+  
+      .user-summary-card {
+        .user-profile-section {
+          flex-wrap: wrap;
+        }
+  
+        .tabs-section {
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+  
+          .tab {
+            white-space: nowrap;
+            min-width: fit-content;
+          }
+        }
+      }
+  
+      .user-info-card {
+        .info-section {
+          .info-grid {
+            grid-template-columns: repeat(3, 1fr);
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .user-details-section {
+      padding: 20px 16px;
+      margin-top: 80px;
+  
+      .back-btn {
+        font-size: 14px;
+        margin-bottom: 20px;
+  
+        svg {
+          font-size: 18px;
+        }
+      }
+  
+      .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        margin-bottom: 30px;
+  
+        h2 {
+          font-size: 20px;
+        }
+  
+        .action-buttons {
+          width: 100%;
+          gap: 12px;
+  
+          button {
+            flex: 1;
+            padding: 10px 16px;
+            font-size: 12px;
+            white-space: nowrap;
+          }
+        }
+      }
+  
+      .user-summary-card {
+        .user-profile-section {
+          padding: 20px;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 20px;
+  
+          .profile-info {
+            width: 100%;
+            gap: 16px;
+  
+            .avatar-circle {
+              width: 80px;
+              height: 80px;
+            }
+  
+            .profile-icon {
+              width: 50px;
+              height: 50px;
+              font-size: 38px;
+            }
+  
+            .user-name-section {
+              h3 {
+                font-size: 18px;
+              }
+  
+              p {
+                font-size: 13px;
+              }
+            }
+          }
+  
+          .divider {
+            width: 100%;
+            height: 1px;
+          }
+  
+          .tier-section,
+          .bank-section {
+            width: 100%;
+          }
+  
+          .bank-section {
+            h3 {
+              font-size: 18px;
+            }
+  
+            p {
+              font-size: 11px;
+            }
+          }
+        }
+  
+        .tabs-section {
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: none;
+  
+          &::-webkit-scrollbar {
+            display: none;
+          }
+  
+          .tab {
+            padding: 14px 16px;
+            font-size: 13px;
+            min-width: auto;
+          }
+        }
+      }
+  
+      .user-info-card {
+        padding: 20px 16px;
+  
+        .info-section {
+          padding: 20px 0;
+  
+          .section-title {
+            font-size: 14px;
+            margin-bottom: 20px;
+          }
+  
+          .info-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            row-gap: 24px;
+  
+            .info-item {
+              .label {
+                font-size: 11px;
+                padding-left: 0;
+              }
+  
+              .value {
+                font-size: 14px;
+                padding-left: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .user-details-section {
+      padding: 16px 12px;
+      margin-top: 70px;
+  
+      .back-btn {
+        font-size: 13px;
+        gap: 6px;
+  
+        svg {
+          font-size: 16px;
+        }
+      }
+  
+      .page-header {
+        gap: 16px;
+        margin-bottom: 24px;
+  
+        h2 {
+          font-size: 18px;
+        }
+  
+        .action-buttons {
+          flex-direction: column;
+          gap: 10px;
+  
+          button {
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 11px;
+          }
+        }
+      }
+  
+      .user-summary-card {
+        .user-profile-section {
+          padding: 16px;
+          gap: 16px;
+  
+          .profile-info {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 12px;
+  
+            .avatar-circle {
+              width: 70px;
+              height: 70px;
+            }
+  
+            .profile-icon {
+              width: 45px;
+              height: 45px;
+              font-size: 32px;
+            }
+  
+            .user-name-section {
+              h3 {
+                font-size: 16px;
+              }
+  
+              p {
+                font-size: 12px;
+              }
+            }
+          }
+  
+          .tier-section {
+            text-align: center;
+  
+            .label {
+              font-size: 13px;
+            }
+  
+            .stars {
+              justify-content: center;
+            }
+          }
+  
+          .bank-section {
+            text-align: center;
+  
+            h3 {
+              font-size: 16px;
+            }
+  
+            p {
+              font-size: 10px;
+            }
+          }
+        }
+  
+        .tabs-section {
+          .tab {
+            padding: 12px 12px;
+            font-size: 11px;
+          }
+        }
+      }
+  
+      .user-info-card {
+        padding: 16px 12px;
+  
+        .info-section {
+          padding: 16px 0;
+  
+          .section-title {
+            font-size: 13px;
+            margin-bottom: 16px;
+          }
+  
+          .info-grid {
+            grid-template-columns: 1fr;
+            gap: 16px;
+  
+            .info-item {
+              .label {
+                font-size: 10px;
+                margin-bottom: 6px;
+              }
+  
+              .value {
+                font-size: 13px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // Extra small devices
+  @media (max-width: 360px) {
+    .user-details-section {
+      .page-header {
+        h2 {
+          font-size: 16px;
+        }
+      }
+  
+      .user-summary-card {
+        .user-profile-section {
+          .profile-info {
+            .avatar-circle {
+              width: 60px;
+              height: 60px;
+            }
+  
+            .profile-icon {
+              width: 40px;
+              height: 40px;
+              font-size: 28px;
+            }
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+body {
+  background: linear-gradient(to right, #f9fafbf0 50%, #ffffff 50%);
+  min-height: 100vh;
+  margin: 0;
+}
+
+.login-container {
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-content {
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 100vh;
+}
+
+.login-left {
+  flex: 1;
+  padding: 60px 80px;
+  display: flex;
+  flex-direction: column;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 80px;
+
+    img {
+      &:first-child {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+
+  .illustration {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -80px;
+
+    img {
+      max-width: 100%;
+      max-height: 500px;
+      object-fit: contain;
+      opacity: 80%;
+    }
+  }
+}
+
+.login-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background-color: #ffffff;
+
+  // Hide mobile illustration on desktop
+  .illustration.mobile-only {
+    display: none;
+  }
+}
+
+.login-form-wrapper {
+  width: 100%;
+  max-width: 447px;
+  margin-top: -40px;
+
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #213F7D;
+    margin: 0 0 12px 0;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    color: #545F7D;
+    margin: 0 0 60px 0;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group {
+    margin-bottom: 24px;
+    position: relative;
+
+    input {
+      width: 90%;
+      padding: 16px 20px;
+      border: 2px solid #D4D4D4;
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: 'Montserrat', sans-serif;
+      color: #545F7D;
+      outline: none;
+      transition: border-color 0.3s ease;
+
+      &::placeholder {
+        color: #A8A8A8;
+      }
+
+      &:focus {
+        border-color: #39CDCC;
+      }
+    }
+
+    &.password-group {
+      position: relative;
+
+      .show-password {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: #39CDCC;
+        font-size: 12px;
+        font-weight: 600;
+        font-family: 'Montserrat', sans-serif;
+        cursor: pointer;
+        letter-spacing: 0.5px;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  .forgot-password {
+    display: inline-block;
+    color: #39CDCC;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .login-button {
+    width: 100%;
+    padding: 16px;
+    background-color: #39CDCC;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #2eb8b7;
+    }
+
+    &:active {
+      background-color: #28a5a4;
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 1024px) {
+  body {
+    background: #ffffff;
+  }
+
+  .login-content {
+    flex-direction: column;
+  }
+
+  .login-left {
+    padding: 40px;
+    min-height: auto;
+
+    .logo {
+      margin-bottom: 40px;
+    }
+
+    // Hide desktop illustration on tablet/mobile
+    .illustration.desktop-only {
+      display: none;
+    }
+  }
+
+  .login-right {
+    // Show mobile illustration on tablet/mobile
+    .illustration.mobile-only {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 40px;
+
+      img {
+        max-width: 80%;
+        max-height: 300px;
+        object-fit: contain;
+        opacity: 80%;
+      }
+    }
+  }
+
+  .login-form-wrapper {
+    margin-top: 0;
+
+    h1 {
+      font-size: 32px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .login-left {
+    padding: 30px 20px;
+  }
+
+  .login-right {
+    padding: 20px;
+
+    .illustration.mobile-only {
+      margin-bottom: 30px;
+
+      img {
+        max-width: 90%;
+        max-height: 250px;
+      }
+    }
+  }
+
+  .login-form-wrapper {
+    h1 {
+      font-size: 28px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+    }
+  }
+}
