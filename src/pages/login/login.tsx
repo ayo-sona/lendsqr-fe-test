@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Login.scss";
+import "./login.scss";
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState("");
