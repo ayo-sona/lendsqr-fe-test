@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { AiOutlineEye, AiOutlineUserDelete, AiOutlineUserAdd } from 'react-icons/ai';
-import './ActionMenu.scss';
+import './actionMenu.scss';
 
 interface ActionMenuProps {
   onViewDetails: () => void;
